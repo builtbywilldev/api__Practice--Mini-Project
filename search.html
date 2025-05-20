@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="search.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>🎬 Movie Finder</h1>
+    <nav>
+      <a href="index.html">Haven</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="loadingSpinner" class="loading-spinner hidden">Loading...</div>
+    <div class="search-controls">
+      <div class="search-box">
+        <input type="text" id="movieInput" placeholder="Enter movie title..." />
+        <button onclick="searchMovie()">Search</button>
+      </div>
+
+      <div class="slider-box">
+        <label for="yearSlider">Filter by year:</label>
+        <input type="range" id="yearSlider" min="1950" max="2025" step="1" value="2025" />
+        <span id="yearValue">2025</span>
+      </div>
+    </div>
+
+    <div id="movieResult" class="movie-result"></div>
+  </main>
+</body>
+</html>

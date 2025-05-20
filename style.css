@@ -1,0 +1,175 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+header {
+  background-color: #1e2a78;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+}
+
+.search-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-box input {
+  padding: 0.5rem;
+  font-size: 16px;
+  width: 250px;
+}
+
+.search-box button {
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.slider-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-box input[type="range"] {
+  width: 150px;
+}
+
+.movie-result {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1rem;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.movie-title {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.movie-year,
+.movie-rating {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+
+/* 
+
+LOADINGSTATE
+
+
+*/
+
+.loading-spinner {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #555;
+  padding: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* 
+
+SLIDER
+
+*/
+
+/* Smooth slider handle */
+input[type="range"] {
+  transition: all 0.3s ease;
+}
+
+/* Smooth text fade when year updates */
+#yearValue {
+  transition: opacity 0.2s ease;
+}
+/* Optional fade effect on number update */
+#yearValue.fade {
+  opacity: 0.3;
+}
+
+
+/* SKELETON LOADING CARDS */
+.movie-card.skeleton {
+  background: #e3e3e3;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-img {
+  width: 100%;
+  height: 240px;
+  background: #d1d1d1;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.skeleton-title,
+.skeleton-year,
+.skeleton-rating {
+  height: 14px;
+  background: #ccc;
+  border-radius: 4px;
+  margin: 6px auto;
+  width: 60%;
+}
+
+.skeleton-title {
+  width: 80%;
+  height: 18px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #d8d8d8;
+  }
+  50% {
+    background-color: #cfcfcf;
+  }
+  100% {
+    background-color: #d8d8d8;
+  }
+}
