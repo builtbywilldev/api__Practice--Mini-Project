@@ -11,14 +11,6 @@ Built to practice API integration, filtering, and responsive UI with animated lo
 - 📱 Clean layout styled with CSS grid
 - 🎯 Shows first 6 relevant results — minimal and focused
 
-## 📸 Preview
-
-> *(Add your screenshots here once pushed)*
-
-- `search.html` – live movie search with year slider
-- Skeleton loading state in action while results load
-
-
 ## 🛠️ Built With
 
 - HTML5
